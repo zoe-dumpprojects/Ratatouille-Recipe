@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratatouille Recipe Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Indie+Flower&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background image with 36% opacity -->
+    <div class="background-image"></div>
+    
+    <div class="container">
+        <header>
+            <div class="title-container">
+                <h1>Ratatouille Recipe</h1>
+                <p>Let's Remy save your hungry stomach<br><span style="font-size: 0.9em;">with whatever's left in your fridge!!!</span></p>
+            </div>
+        </header>
+        
+        <main>
+            <section class="recipe-form">
+                <h2>Customize Your Recipe</h2>
+                
+                <div class="form-group">
+                    <label for="ingredients">What's left in your fridge?</label>
+                    <textarea id="ingredients" rows="4" placeholder="Enter ingredients you have (e.g., chicken, rice, broccoli, garlic, olive oil)"></textarea>
+                    <small>Separate ingredients with commas or new lines</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dietary_restrictions">Dietary Restrictions</label>
+                    <select id="dietary_restrictions">
+                        <option value="">None</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="gluten-free">Gluten-Free</option>
+                        <option value="dairy-free">Dairy-Free</option>
+                        <option value="nut-free">Nut-Free</option>
+                        <option value="keto">Keto</option>
+                        <option value="paleo">Paleo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cooking_time">Maximum Cooking Time</label>
+                    <select id="cooking_time">
+                        <option value="15">15 minutes or less</option>
+                        <option value="30">30 minutes or less</option>
+                        <option value="45">45 minutes or less</option>
+                        <option value="60">60 minutes or less</option>
+                        <option value="90">90 minutes or less</option>
+                        <option value="120+">No time limit</option>
+                    </select>
+                </div>
+                
+                <div class="form-actions">
+                    <button id="generate-recipe" class="btn-primary">Generate Recipe</button>
+                    <button id="clear-recipe" class="btn-secondary">Clear Recipe</button>
+                </div>
+            </section>
+            
+            <section class="recipe-result">
+                <div id="recipe-container" class="recipe-container">
+                    <div class="recipe-placeholder">
+                        <div class="placeholder-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <!-- Sushi rice -->
+                                <path d="M8 12a4 4 0 1 0 8 0" fill="currentColor"/>
+                                <!-- Fish topping -->
+                                <path d="M7 12c0 3 6 3 6 0" fill="none"/>
+                                <!-- Fish texture lines -->
+                                <path d="M8 13h4" stroke-width="1"/>
+                                <path d="M8 14h4" stroke-width="1"/>
+                                <path d="M8 11h4" stroke-width="1"/>
+                                <!-- Chopsticks -->
+                                <path d="M16 4l2 16M18 4l-2 16" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <h3>Your Recipe Will Appear Here</h3>
+                        <p>Fill in your ingredients and preferences, then click "Generate Recipe" to get started.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Powered by Ratatouille Recipe Generator &copy; 2023</p>
+        </footer>
+    </div>
+    
+    <!-- Audio element for background music -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://samplelib.com/lib/preview/mp3/sample-15s.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
